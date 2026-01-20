@@ -1,6 +1,6 @@
 import { CityData, AQICategory } from './types';
 
-export const WAQI_TOKEN = '660fc78fbbb78592571ab8b08461a90cc63b6923';
+export const WAQI_TOKEN = import.meta.env.VITE_WAQI_TOKEN;
 
 export const CITIES: CityData[] = [
   { id: 'delhi', name: 'Delhi', stationId: '10118' },
