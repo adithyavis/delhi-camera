@@ -1,0 +1,7 @@
+{
+  "name": "Delhi Camera",
+  "description": "Real-time smog visualization using your camera and live AQI data from WAQI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
