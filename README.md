@@ -20,4 +20,5 @@ on your live camera feed based on real-time AQI data.
 **Prerequisites:** Node.js
 
 1. Install dependencies: `yarn install`
-2. Run the app: `yarn run dev`
+2. Set up .env variables
+3. Run the app: `yarn run dev`
