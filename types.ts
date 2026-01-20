@@ -12,7 +12,8 @@ export enum AQICategory {
 export interface CityData {
   id: string;
   name: string;
-  stationId: string;
+  lat: number;
+  lng: number;
   forceNoHaze?: boolean;
 }
 

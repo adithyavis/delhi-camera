@@ -1,11 +1,11 @@
 import { CityData, AQICategory } from './types';
 
-export const WAQI_TOKEN = import.meta.env.VITE_WAQI_TOKEN;
+export const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_PLATFORM_API_KEY;
 
 export const CITIES: CityData[] = [
-  { id: 'delhi', name: 'Delhi', stationId: '10118' },
-  { id: 'bangalore', name: 'Bangalore', stationId: '8190' },
-  { id: 'mangalore', name: 'Mangalore', stationId: '13719', forceNoHaze: true },
+  { id: 'delhi', name: 'Delhi', lat: 28.6139, lng: 77.209 },
+  { id: 'bangalore', name: 'Bangalore', lat: 12.9716, lng: 77.5946 },
+  { id: 'mangalore', name: 'Mangalore', lat: 12.9141, lng: 74.856, forceNoHaze: true },
 ];
 
 export const AQI_LEVELS = [
