@@ -7,21 +7,18 @@
     <title>Delhi Camera</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+      :root {
+        --vh: 1vh;
+      }
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
         background-color: #000;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        height: 100dvh;
-        height: 100vh; /* fallback for browsers that don't support dvh */
+        height: calc(var(--vh, 1vh) * 100);
         width: 100vw;
         position: fixed;
-      }
-      @supports (height: 100dvh) {
-        body {
-          height: 100dvh;
-        }
       }
       /* Prevent pull-to-refresh and elastic scrolling */
       html, body {
@@ -33,6 +30,18 @@
         width: 100%;
       }
     </style>
+    <script>
+      // Fix for mobile viewport height (accounts for browser chrome)
+      function setVH() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', vh + 'px');
+      }
+      setVH();
+      window.addEventListener('resize', setVH);
+      window.addEventListener('orientationchange', function() {
+        setTimeout(setVH, 100);
+      });
+    </script>
     <script type="importmap">
 {
   "imports": {
