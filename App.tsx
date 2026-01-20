@@ -40,7 +40,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="relative h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative h-dvh h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden">
       {/* Background Camera Feed */}
       <CameraView 
         aqi={aqiValue || 0} 
@@ -76,8 +76,11 @@ const App: React.FC = () => {
       </div>
 
       {/* Bottom Controls */}
-      <div className="absolute bottom-10 left-0 w-full flex justify-between items-center px-10 pointer-events-none">
-        <button 
+      <div
+        className="absolute left-0 w-full flex justify-between items-center px-10 pointer-events-none"
+        style={{ bottom: 'calc(2.5rem + env(safe-area-inset-bottom, 0px))' }}
+      >
+        <button
           onClick={() => setIsLegendOpen(true)}
           className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white pointer-events-auto active:scale-95 transition-transform"
           aria-label="Show Legend"
