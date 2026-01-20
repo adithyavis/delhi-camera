@@ -33,8 +33,8 @@ export const calculateSmogParams = (aqi: number, forceNoHaze: boolean = false): 
   } else {
     // Severe case: 301+
     const ratio = Math.min((aqi - 300) / 400, 1);
-    opacity = 0.75 + ratio * 0.25;
-    blur = 5.0 + ratio * 4.0;
+    opacity = 1.0 + ratio * 0.1;
+    blur = 8.0 + ratio * 4.0;
   }
   return {
     opacity,

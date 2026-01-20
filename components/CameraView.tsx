@@ -59,7 +59,7 @@ const smogFragmentShader = `
 
     // Height-based density gradient (more smog toward top/horizon, but still visible at bottom)
     // Base of 0.4 ensures foreground has visible smog, gradient adds more toward horizon
-    float heightFactor = 0.4 + 0.6 * smoothstep(0.0, 0.7, vUv.y);
+    float heightFactor = 0.4 + 0.8 * smoothstep(0.0, 0.7, vUv.y);
 
     // Multi-layer animated noise for organic movement
     vec2 p1 = vUv * 3.0 + vec2(uTime * 0.02, uTime * 0.01);
@@ -74,7 +74,7 @@ const smogFragmentShader = `
 
     // Final density combines height gradient with noise variation
     float baseDensity = uIntensity * heightFactor;
-    float noisyDensity = baseDensity * (0.6 + combinedNoise * 0.4);
+    float noisyDensity = baseDensity * (0.8 + combinedNoise * 0.4);
 
     // Clamp density
     float density = clamp(noisyDensity, 0.0, 0.85);
