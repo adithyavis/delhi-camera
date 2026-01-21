@@ -5,6 +5,11 @@ A camera app that shows you what your surroundings would look like under Delhi's
 Select amongst a few Indian cities including Delhi, and the app overlays realistic volumetric smog
 on your live camera feed based on real-time AQI data.
 
+## DEMO
+
+| ![demo1](./assets/demo1.gif) | ![demo2](./assets/demo2.gif) |
+| ---------------------------- | ---------------------------- |
+
 ## How It Works
 
 1. Fetches live AQI data for Indian cities
